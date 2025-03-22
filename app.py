@@ -17,7 +17,7 @@ def cts():
     rj = request.json
     logger.info(json.dumps(rj))
     if rj['text'].lower().strip() == 'dice roll':
-        ret_msg = {'bot_id': '7d22d6aae5e37b72fbb41ef03b', 'text': str(random.randint(1,6))}
+        ret_msg = {'bot_id': '7d48b603bf93154b8f4a2bee31', 'text': str(random.randint(1,6))}
         requests.post('https://api.groupme.com/v3/bots/post', json=ret_msg)
         return json.dumps({'success': True}), 201, {'ContentType':'application/json'} 
     return json.dumps(rj), 200, {'ContentType':'application/json'} 
